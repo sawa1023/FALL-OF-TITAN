@@ -82,29 +82,29 @@
       box-shadow: 0 16px 40px rgba(0,0,0,0.55);
     }
 
+    /* === 여기부터 배너/이미지/그라데이션 부분 수정 === */
     .banner {
       position: relative;
       height: 340px;
       border-radius: 12px;
       overflow: hidden;
       background-image: url("FALL_OF_TITAN.png");
-      background-size: cover;
-      background-position: center;
+      background-size: contain;          /* 원본 전체가 보이도록 */
+      background-position: center center;
+      background-repeat: no-repeat;
       display: flex;
       align-items: flex-end;
       isolation: isolate;
     }
     .banner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(3,6,10,0.8) 0%,
-    rgba(3,6,10,0) 60%
-  );
-}
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: none;                  /* 어두운 그라데이션 완전히 제거 */
+      pointer-events: none;
     }
+    /* === 수정 끝 === */
+
     .banner-caption {
       position: relative;
       padding: 18px 20px;
@@ -597,5 +597,3 @@
   </script>
 </body>
 </html>
-
-
