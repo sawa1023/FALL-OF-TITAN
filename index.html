@@ -95,11 +95,15 @@
       isolation: isolate;
     }
     .banner::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(3,6,10,0.95) 0, rgba(10,12,18,0.2) 55%, rgba(17,20,30,0.9) 100%);
-      mix-blend-mode: multiply;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(3,6,10,0.8) 0%,
+    rgba(3,6,10,0) 60%
+  );
+}
     }
     .banner-caption {
       position: relative;
@@ -593,4 +597,5 @@
   </script>
 </body>
 </html>
+
 
